@@ -1,0 +1,39 @@
+
+<mat-card class="box">
+    <form class="controls" [formGroup]="newNoteForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="form-field" class="text-size">
+          <input required matInput type="text" formControlName="title" placeholder="Titel der neuen Notiz">
+          <mat-error>
+              <div *ngIf="newNoteForm.get('title').hasError('minlength') && newNoteForm.get('title').dirty">
+                Der Titel muss mindestens 15 Zeichen lang sein!
+              </div>
+              <div *ngIf="newNoteForm.get('title').hasError('maxlength') && newNoteForm.get('title').dirty">
+                  Der Titel darf nicht länger als 30 Zeichen lang sein!
+              </div>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-field" class="text-size">
+          <textarea required matInput type="text" formControlName="notetext" placeholder="Schreib deine Notiz hier."></textarea>
+          <mat-error>
+            <div *ngIf="newNoteForm.get('notetext').hasError('minlength') && newNoteForm.get('notetext').dirty">
+              Der Text muss mindestens 50 Zeichen lang sein!
+            </div>
+            <div *ngIf="newNoteForm.get('notetext').hasError('maxlength') && newNoteForm.get('notetext').dirty">
+                Der Text Text darf nicht lägner als 150 Zeichen lang sein!
+              </div>
+          </mat-error>
+        </mat-form-field>
+
+      <button mat-raised-button class="controls button" type="submit" [disabled]="!newNoteForm.valid">Notiz speichern</button>
+
+  </form>
+</mat-card>
+
+<p>
+  newNoteForm Status: {{ newNoteForm.status }}
+</p>
+<p>
+  {{newNoteForm.value | json }}
+</p>
