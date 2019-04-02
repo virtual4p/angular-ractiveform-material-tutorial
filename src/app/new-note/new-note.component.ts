@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new-note',
@@ -9,8 +9,6 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 export class NewNoteComponent implements OnInit {
 
   newNoteForm: FormGroup;
-  title: FormControl;
-  notetext: FormControl;
 
   constructor(private fb: FormBuilder) { }
 
