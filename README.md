@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
-Das ist der Beispiel-Code für das Angular Reactive Form Tutorial von virtual4p Thomas Keller. Das Tutorial ist findet man unter: https://angular-virtual4p.blogspot.com/2019/04/angular-pulldown-menu-mit-css.html
+Das ist der Beispiel-Code für das Angular Reactive Form Tutorial von virtual4p Thomas Keller. Das Tutorial ist findet man unter: https://angular-virtual4p.blogspot.com/2019/04/angular-reaktive-formulare-mit-material.html
 
 ## Development server
 
